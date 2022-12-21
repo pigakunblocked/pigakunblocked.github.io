@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>POKE GAMES - Join Now & Play Free Online Games!</title>
+    <meta content="Templines" name="author">
+    <meta content="TeamHost" name="description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="format-detection" content="telephone=no">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/libs.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+.game-iframe-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    min-height: 75vh;
+}
+.game-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+        .FG-splash-button{
+            border-bottom-color:#ffb53d!important;
+            color:#000;background:linear-gradient(140deg,#fbde04,#e2c803)}
+        .FG-splash-button:hover{
+            border-bottom-color:#ff5e00!important;
+            color:#fff;
+            background:linear-gradient(140deg,#ff9214,#fa8500)}
+        .FG-splash-button:active{
+            border-bottom-color:#ff7e33!important;
+            background:linear-gradient(140deg,#ffa947,#ff9d2e)}
+        .SP-splash-button{
+            width:290px;
+            height:60px;
+            margin-top:2.5rem;
+            border-radius:290486px!important;
+            padding-left:2rem;
+            padding-right:2rem;
+            border:3px solid #fff!important;
+            color:#0a0a0a;
+            text-transform:uppercase;
+            background:linear-gradient(180deg,#F46119,#F46119);
+            box-shadow:12px 14px 15px -1px rgba(0,0,0,.2)}
+        .SP-splash-button:before{
+            content:"";
+            position:absolute;
+            left:0;top:1px;
+            width:100%;
+            height:100%;
+            border-radius:290486px!important;
+            opacity:0;
+            background:linear-gradient(180deg,#fff600,#ffde00);
+            box-shadow:inset 0 0 7px 0 rgba(223,180,170,.53);
+            transform:scale(0);
+            transform-origin:50% 100%;
+            will-change:transform;
+            transition:transform .3s cubic-bezier(.25,.46,.45,.94),opacity .2s cubic-bezier(.25,.46,.45,.94);
+            z-index:-1}
+        .SP-splash-top>div>button:active{transform:translateY(0)}
+        .SP-splash-button:hover:before{
+            top:0;
+            opacity:1;
+            transform:scale(1)}
+        .SP-splash-top>div>button:active:before{
+            box-shadow:inset 0 0 7px 0 rgba(224,71,36,.53),inset 0 0 7px 0 rgba(0,0,0,.35)}
+        .HG-splash-button{
+            height:35px;
+            line-height:35px;
+            border-bottom:none!important;
+            border-radius:5px!important;
+            color:#f06000;
+            background:#fff}
+        .HG-splash-button:hover{
+            color:#fff;
+            background:#f06000}
+        .BG-splash-button,.BG-splash-button:active{
+            box-shadow:inset 0 3px 0 0 #00fcff,
+            inset 20px 0 50px rgba(8,238,225,.3),
+            inset 20px 0 300px rgba(0,200,187,.05),
+            inset 0 20px 50px rgba(8,238,225,.3),
+            inset 0 0 10px #affffa,4px 4px 4px 0 rgba(10,10,10,.5)!important;
+            background-color:rgba(9,81,105,.5);
+            border:0;
+            color:#affffa;
+            width:290px;
+            height:4rem;
+            border-radius:290486px!important;
+            font-size:1.25rem!important;
+            border:2px solid #5258b5!important;
+            opacity:.7}
+        .BG-splash-button:before{
+            content:"";
+            position:absolute;
+            left:0;top:1px;
+            width:100%;
+            height:100%;
+            border-radius:290486px!important;
+            opacity:0;
+            background-color:#fff;box-shadow:inset 0 0 7px 0 rgba(223,180,170,.53)!important;transform:scale(0);
+            transform-origin:50% 50%;will-change:transform;
+            transition:transform 172ms cubic-bezier(.25,.46,.45,.94),opacity 172ms cubic-bezier(.25,.46,.45,.94);
+            z-index:-1}
+        .BG-splash-button:hover{
+            color:rgba(0,0,0,.7)!important;border:2px solid #098c9c!important}
+        .BG-splash-button:active{
+            border-color:transparent!important;
+            color:rgba(0,0,0,.7);transform:translateY(0)}
+        .BG-splash-button:hover:before{
+            top:0;
+            opacity:1;
+            transform:scale(1)}
+        .BG-splash-button:active:before{
+            box-shadow:inset 0 0 7px 0 rgba(224,71,36,.53),inset 0 0 7px 0 rgba(0,0,0,.35)!important}body{position:inherit}
+        .talpa-splash-background-container{
+            box-sizing:border-box;
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            background-color:#000;
+            overflow:hidden}
+        .talpa-splash-background-image{
+            box-sizing:border-box;
+            position:absolute;
+            top:-25%;
+            left:-25%;
+            width:150%;
+            height:150%;
+            background-image:var(--thumb);
+            background-size:cover;
+            filter:blur(50px) brightness(1.5)}
+        .talpa-splash-container{
+            display:flex;
+            flex-flow:column;
+            box-sizing:border-box;
+            position:absolute;
+            bottom:0;
+            width:100%;
+            height:100%}
+        .talpa-splash-top{
+            display:flex;
+            flex-flow:column;
+            box-sizing:border-box;
+            flex:1;
+            align-self:center;
+            justify-content:center;
+            padding:20px}
+        .talpa-splash-top>div{text-align:center}
+        .talpa-splash-top>div>button{
+            position:relative;
+            min-width:180px;
+            min-height:45px;
+            line-height:45px;
+            border:0;
+            border-radius:25px;
+            border-bottom:5px solid grey;
+            white-space:nowrap;
+            text-overflow:ellipsis;
+            text-align:center;
+            text-transform:uppercase;
+            text-shadow:1px 1px 1px rgba(0,0,0,.004);
+            font-family:Roboto Condensed,Helvetica Neue,Arial,"sans-serif";
+            font-size:16px;
+            font-weight:400;
+            cursor:pointer;
+            box-shadow:inset 0 -1px 1px hsla(0,0%,100%,.1),inset 0 1px 1px hsla(0,0%,100%,.2);
+            will-change:transform;
+            transition:transform .15s linear}
+        .talpa-splash-top>div>button:focus{outline:none}
+        .talpa-splash-top>div>button:active{
+            box-shadow:0 10px 20px rgba(0,0,0,.19),0 6px 6px rgba(0,0,0,.13);
+            transform:translateY(-5px)}
+        .talpa-loader,.talpa-loader:after{
+            border-radius:50%;
+            width:1.5em;
+            height:1.5em}
+        .talpa-loader{
+            box-sizing:content-box;
+            margin:0 auto;
+            font-size:10px;
+            position:relative;
+            text-indent:-9999em;
+            border:1.1em solid hsla(0,0%,100%,.2);
+            border-left-color:#fff;
+            -webkit-transform:translateZ(0);
+            -ms-transform:translateZ(0);
+            transform:translateZ(0);
+            -webkit-animation:talpa-load8 1.1s linear infinite;
+            animation:talpa-load8 1.1s linear infinite;
+            display:none}
+        .talpa-splash-top>div>div:first-child{
+            position:relative;
+            width:150px;
+            height:150px;
+            margin:auto auto 20px;
+            border-radius:10px;
+            overflow:hidden;
+            border:2px solid hsla(0,0%,100%,.8);
+            box-shadow:inset 0 5px 5px rgba(0,0,0,.5),0 2px 4px rgba(0,0,0,.3);
+            background-image:var(--thumb);
+            background-position:50%;
+            background-size:cover}
+        .talpa-splash-top>div>div>img{
+            width:100%;
+            height:100%}
+        .talpa-splash-bottom{
+            display:flex;
+            flex-flow:column;
+            box-sizing:border-box;
+            align-self:center;
+            justify-content:center;
+            width:100%;
+            padding:0 0 20px}
+        .talpa-splash-bottom>.talpa-splash-consent,.talpa-splash-bottom>.talpa-splash-title{
+            box-sizing:border-box;
+            width:100%;
+            padding:20px;
+            background:linear-gradient(90deg,transparent,rgba(0,0,0,.5) 50%,transparent);
+            color:#fff;
+            text-align:left;
+            font-size:12px;
+            font-family:Arial;
+            font-weight:400;
+            text-shadow:0 0 1px rgba(0,0,0,.7);
+            line-height:150%}
+        .talpa-splash-bottom>.talpa-splash-title{
+            padding:15px 0;
+            text-align:center;
+            font-size:18px;
+            font-family:Helvetica,Arial,sans-serif;
+            font-weight:700;
+            line-height:100%}
+        .talpa-splash-bottom>.talpa-splash-consent a{
+            color:#fff}
+            @-webkit-keyframes talpa-load8{0%{-webkit-transform:rotate(0deg);
+            transform:rotate(0deg)}to{-webkit-transform:rotate(1turn);
+            transform:rotate(1turn)}}
+            @keyframes talpa-load8{0%{-webkit-transform:rotate(0deg);
+            transform:rotate(0deg)}to{-webkit-transform:rotate(1turn);
+            transform:rotate(1turn)}}
+            @keyframes talpa-gradient{0%{background-position:0 50%}50%{background-position:100% 50%}to{background-position:0 50%}}
+        .iframeloader {
+            background: url(./images/loadinggif.gif) center center no-repeat;
+            background-size: 5vw;}
+.article-header {
+    width: 100%;
+    float: left;
+    border-bottom: 1px solid rgba(255,255,255,.1);
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    margin-top: 20px
+}
+
+    </style>
+</head>
+
+<body class="page-store">
+
+    <input id="toggle" type="checkbox">
+    <script type="text/javascript">
+        document.getElementById("toggle").addEventListener("click", function() {
+            document.getElementsByTagName('body')[0].classList.toggle("dark-theme");
+        });
+
+    </script>
+
+    <!-- Loader-->
+    <div id="page-preloader">
+        <div class="preloader-1">
+            <div class="loader-text">Loading</div>
+            <span class="line line-1"></span>
+            <span class="line line-2"></span>
+            <span class="line line-3"></span>
+            <span class="line line-4"></span>
+            <span class="line line-5"></span>
+            <span class="line line-6"></span>
+            <span class="line line-7"></span>
+            <span class="line line-8"></span>
+            <span class="line line-9"></span>
+        </div>
+
+    </div>
+    <!-- Loader end-->
+
+
+    <div class="page-wrapper">
+        <header class="page-header">
+            <div class="page-header__inner">
+                <div class="page-header__sidebar">
+                    <div class="page-header__menu-btn"><button class="menu-btn ico_menu is-active"></button></div>
+                    <div class="page-header__logo"><img src="assets/img/logo.png" alt="logo"><span class="page-header__logo_text">Unblocked Games</span></div>
+                </div>
+                <div class="page-header__content">
+                    <div class="page-header__search">
+                        <div hidden class="search">
+                            <div class="search__input"><i class="ico_search"></i><input type="search" name="search" placeholder="Search"></div>
+                            <div class="search__btn"><button type="button"><i class="ico_microphone"></i></button></div>
+                        </div>
+                    </div>
+                    <div hidden class="page-header__action">
+                        <a class="action-btn" href="06_chats.html"><i class="ico_message"></i><span class="animation-ripple-delay1"></span></a>
+                        <a class="action-btn" href="07_friends.html"><i class="ico_notification"></i><span class="animation-ripple-delay2"></span></a>
+                        <a class="profile" href="08_wallet.html"><img src="assets/img/profile.png" alt="profile"></a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="page-content">
+            <aside class="sidebar is-show" id="sidebar">
+                <div class="sidebar-box">
+                    <ul class="uk-nav">
+                        <li><a href="index.html"><i class="ico_home"></i><span>Home</span></a></li>                                              
+                        <li><a href="3d-games.html"><i class="ico_3d-game"><img src="assets/img/svgico/3d.svg" alt=""></i><span>3D GAMES</span></a></li>
+                        <li><a href="car-games.html"><i class="ico_car-games"><img src="assets/img/svgico/car.svg" alt=""></i><span>CAR GAMES</span>
+                        <li><a href="fighting.html"><i class="ico_fighting"><img src="assets/img/svgico/actions.svg" alt=""></i><span>FIGHTING GAMES</span></a></li>
+                        <li><a href="running.html"><i class="ico_running"><img src="assets/img/svgico/run.svg" alt=""></i><span>RUNNING GAMES</span></a></li>
+                        <li><a href="shooting.html"><i class="ico_shooting"><img src="assets/img/svgico/shooting.svg" alt=""></i><span>SHOOTING GAMES</span></a></li>
+                        <li><a href="sport.html"><i class="ico_sport"><img src="assets/img/svgico/sport.svg" alt=""></i><span>SPORT GAMES</span></a></li>
+                    </ul>
+                </div>
+            </aside>
+            <main class="page-main">
+                <ul class="uk-breadcrumb">
+                    <li><a href="index.html"><span data-uk-icon="chevron-left"></span><span>Back to Store</span></a></li>
+                    <li><span>Poki Games</span></li>
+                </ul>
+                <h3 class="uk-text-lead">Tunnel Rush 2 Online</h3>
+                <div class="uk-grid uk-grid-small" data-uk-grid>
+                    <div class="uk-width-2-3@s">
+                        <div class="gallery">
+                            <div class="js-gallery-big gallery-big">
+                                <div class="swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide"><img src="assets/img/tunnelrush2/tunnelrush1.png" alt="image"></div>
+                                        <div class="swiper-slide"><img src="assets/img/tunnelrush2/tunnelrush2.png" alt="image"></div>
+                                        <div class="swiper-slide"><img src="assets/img/tunnelrush2/tunnelrush3.png" alt="image"></div>
+                                        <div class="swiper-slide"><img src="assets/img/tunnelrush2/tunnelrush4.png" alt="image"></div>
+                                        <div class="swiper-slide"><img src="assets/img/tunnelrush2/tunnelrush5.png" alt="image"></div>
+                                        <div class="swiper-slide"><img src="assets/img/tunnelrush2/tunnelrush6.png" alt="image"></div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="js-gallery-small gallery-small">
+                                <div class="swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide"><img src="assets/img/tunnelrush2/tunnelrush1.png" alt="image"></div>
+                                        <div class="swiper-slide"><img src="assets/img/tunnelrush2/tunnelrush2.png" alt="image"></div>
+                                        <div class="swiper-slide"><img src="assets/img/tunnelrush2/tunnelrush3.png" alt="image"></div>
+                                        <div class="swiper-slide"><img src="assets/img/tunnelrush2/tunnelrush4.png" alt="image"></div>
+                                        <div class="swiper-slide"><img src="assets/img/tunnelrush2/tunnelrush5.png" alt="image"></div>
+                                        <div class="swiper-slide"><img src="assets/img/tunnelrush2/tunnelrush6.png" alt="image"></div>
+
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                        <div class="game-profile-price">
+                            <div class="game-profile-price__value"></div>
+                            <div class="game-iframe-container" id="loadgame">
+                               <div class="talpa-splash-container" style="background: var(--color2);"><div class="talpa-splash-top"><div>
+                                    <div style="--thumb:url(assets/img/tunnelrush2/tunnelrush1.png);" alt="Stylish Crop Top Trends"></div>
+                                    <button id="talpa-splash-button" class="SP-splash-button" onclick="loadMainGame()" style="display: block;">PLAY NOW!</button>
+                                    <div class="talpa-loader" style="display: none;">Loading...</div></div></div><div class="talpa-splash-bottom"></div></div>
+                               </div>
+                            <!-- <iframe src="https://*tunnelrush2.games235.com" name="iframe" height="680" width="100%" title="" allowfullscreen></iframe> -->
+                        </div> 
+                      
+                    </div>
+                    <div class="uk-width-1-3@s">
+                        <div class="game-profile-card">
+                            <div class="game-profile-card__media"><img src="assets/img/tunnelrush2/tunnelrush1.png" alt="game-profile-card"></div>
+                            <div class="game-profile-card__intro"> 
+                            <div><h5>Description Game:</h5><br></div>
+                            <span>Tunnel Rush 2 is a skill game where you ride fast into colorful 3D tunnels and experience the exhilarating kaleidoscope of hazards and treasures! 
+                                Rotate the screen clockwise or anti-clockwise to move your ship and break through the obstacle that matches your ship's current color, otherwise your ship will crash. 
+                                Collect as many diamonds as possible to upgrade your ship. The obstacles will become harder to pass with each level passed, 
+                                so keep your focus on the screen and your fingers on the buttons! Can you finish Tunnel Rush 2 and unlock every upgrade?
+
+                                How to play Tunnel Rush 2?
+                                Move - A/D or Left/Right arrow keys
+                                
+                                (Mobile) Move - Tap and hold the left or right side of the screen
+                                
+                                Who created Tunnel Rush 2?
+                                Tunnel Rush 2 was created by Deer Cat Games. Play their other legendary games Poki: Tunnel Rush, Super Speeder, Wave Rider and Strings
+                                
+                                Where can I play Tunnel Rush 2?
+                                You can play Tunnel Rush 2 on Poki.
+                                
+                                When did Tunnel Rush come out?
+                                Tunnel Rush was released in 2003. Tunnel Rush 2 was released in 2018.
+                                
+                                How can I play Tunnel Rush 2 on PC?
+                                You can play Tunnel Rush 2 on your browser without installing or downloading for free on Poki.
+                                
+                                Are there skins in Tunnel Rush 2?
+                                Yes, you can unlock many skins in Tunnel Rush 2 as you progress through the game.</span>
+                            <h5>Games Control:</h5><br>
+                        </div>
+                            <ul class="game-profile-card__list">
+                                <li>
+                                    <div><B>Reviews:</B></div>
+                                    <div class="game-card__rating"><span>4.7</span><i class="ico_star"></i><span class="rating-vote">(433)</span></div>
+                                </li>
+                                <li>
+                                    <div><b>Release date:</b></div>
+                                    <div>24 Apr, 2022</div>
+                                </li>
+                                <li>
+                                    <div><b>Developer:</b></div>
+                                    <div>11 bit studios</div>
+                                </li>
+                                <li>
+                                    <div><b>Platforms:</b></div>
+                                    <div class="game-card__platform"><i class="ico_windows"></i><i class="ico_apple"></i></div>
+                                </li>
+                            </ul>
+                            <ul class="game-profile-card__type">
+                                <li><span><b>Strategy</b></span></li>
+                                <li><span><b>Survival</b></span></li>
+                                <li><span><b>City Builder</b></span></li>
+                                <li><span><b>Dark</b></span></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <div class="page-modals">
+        <div class="uk-flex-top" id="modal-report" data-uk-modal>
+            <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical"><button class="uk-modal-close-default" type="button" data-uk-close></button>
+                <h2 class="uk-modal-title">Report</h2>
+                <form class="uk-form-stacked" action="#">
+                    <div class="uk-margin">
+                        <div class="uk-form-label">Subject</div>
+                        <div class="uk-form-controls"><select class="js-select">
+                                <option value="">Choose Subject</option>
+                                <option value="Subject 1">Subject 1</option>
+                                <option value="Subject 2">Subject 2</option>
+                                <option value="Subject 3">Subject 3</option>
+                            </select></div>
+                    </div>
+                    <div class="uk-margin">
+                        <div class="uk-form-label">Details</div>
+                        <div class="uk-form-controls"><textarea class="uk-textarea" name="details" placeholder="Try to include all details..."></textarea></div>
+                        <div class="uk-form-controls uk-margin-small-top">
+                            <div data-uk-form-custom><input type="file"><button class="uk-button uk-button-default" type="button" tabindex="-1"><i class="ico_attach-circle"></i><span>Attach File</span></button></div>
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <div class="uk-grid uk-flex-right" data-uk-grid>
+                            <div><button class="uk-button uk-button-small uk-button-link">Cancel</button></div>
+                            <div><button class="uk-button uk-button-small uk-button-danger">Submit</button></div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="uk-flex-top" id="modal-help" data-uk-modal>
+            <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical"><button class="uk-modal-close-default" type="button" data-uk-close></button>
+                <h2 class="uk-modal-title">Help</h2>
+                <div class="search">
+                    <div class="search__input"><i class="ico_search"></i><input type="search" name="search" placeholder="Search"></div>
+                    <div class="search__btn"><button type="button"><i class="ico_microphone"></i></button></div>
+                </div>
+                <div class="uk-margin-small-left uk-margin-small-bottom uk-margin-medium-top">
+                    <h4>Popular Q&A</h4>
+                    <ul>
+                        <li><img src="assets/img/svgico/clipboard-text.svg" alt="icon"><span>How to Upload Your Developed Game</span></li>
+                        <li><img src="assets/img/svgico/clipboard-text.svg" alt="icon"><span>How to Go Live Stream</span></li>
+                        <li><img src="assets/img/svgico/clipboard-text.svg" alt="icon"><span>Get in touch with the Creator Support Team</span></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#!">browse all articles</a></li>
+                        <li><a href="#!">Send Feedback</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/libs.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        function loadMainGame(){
+    var html = `<iframe class="game-iframe iframeloader" id="game-area" src="https://tunnelrush2.games235.com" width="480" height="800" scrolling="none" frameborder="0" allowfullscreen="" tabindex="0"></iframe>`;
+    document.getElementById("loadgame").innerHTML = html;
+    document.getElementById('loadgame').scrollIntoView();
+}
+    </script>
+</body>
+
+</html>
