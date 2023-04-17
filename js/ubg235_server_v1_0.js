@@ -1,6 +1,6 @@
 // ubg235 Server
 const REDIRECT_GUIDE= {
-    "tunnelrushunblocked": "(unity)tunnel-rush-unblocked",
+    "adventure-drivers": "https://pigak.com/1v1lol.html",
     "burritobison": "(unity)burrito-bison-launcha-libre-unblocked",
     "snowrider3dunblocked": "(unity)snow-rider-3d-unblocked",
     "tunnelrushunblocked.github.io/2": "(unity)tunnel-rush-2-unblocked",
@@ -47,7 +47,7 @@ if (!inFrame() && !botBrowser()) {
             page_url= page_url.replace("(html5)", "https://html5.games235.com/");
             page_url= page_url.replace("(unity)", "https://unity.games235.com/");
             page_url= page_url.replace("(flash)", "https://flash.games235.com/");
-            page_url+= ".html";
+            // page_url+= ".html";
             window.location= page_url;
             break;
         }
