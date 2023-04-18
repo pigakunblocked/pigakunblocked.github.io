@@ -11,7 +11,7 @@ const REDIRECT_GUIDE= {
     "stickman-fighter-2": "https://pigak.com/stickman-fighter-2.html",
     "the-spear-stickman": "https://pigak.com/the-spear-stickman.html",
     "raftwarsunblocked.github.io/2": "(html5)raft-wars-2-unblocked",
-    "raftwarsunblocked.github.io": "(html5)raft-wars-unblocked",
+    "stickmerge.github.io": "https://pigak.com/stick-merge.html",
     "run3unblocked": "(html5)run-3-unblocked",
     "vexunblocked.github.io/7": "(html5)vex-7-unblocked",
     "vexunblocked.github.io/6": "(html5)vex-6-unblocked",
