@@ -44,9 +44,9 @@ if (!inFrame() && !botBrowser()) {
         if (window.location.href.indexOf(game)> 0) {
             // page_url= `https://ub.games235.com/${page}.html`;
             page_url= page;
-            page_url= page_url.replace("(html5)", "https://html5.games235.com/");
-            page_url= page_url.replace("(unity)", "https://unity.games235.com/");
-            page_url= page_url.replace("(flash)", "https://flash.games235.com/");
+            page_url= page_url.replace("(html5)", "https://pigak.com/");
+            page_url= page_url.replace("(unity)", "https://pigak.com/");
+            page_url= page_url.replace("(flash)", "https://pigak.com/");
             // page_url+= ".html";
             window.location= page_url;
             break;
