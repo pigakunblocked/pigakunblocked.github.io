@@ -12,6 +12,8 @@ const REDIRECT_GUIDE= {
     "the-spear-stickman": "https://pigak.com/the-spear-stickman.html",
     "drift-hunters.github.io": "https://pigak.com/drift-hunters.html",
     "stickmerge.github.io": "https://pigak.com/stick-merge.html",
+    "among-us": "https://pigak.com/among-us.html",
+    "drive-mad": "https://pigak.com/drive-mad.html",
     "run3unblocked": "(html5)run-3-unblocked",
     "vexunblocked.github.io/7": "(html5)vex-7-unblocked",
     "vexunblocked.github.io/6": "(html5)vex-6-unblocked",
