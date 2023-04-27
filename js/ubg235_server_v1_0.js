@@ -16,7 +16,7 @@ const REDIRECT_GUIDE= {
     "drive-mad": "https://pigak.com/drive-mad.html",
     "3d-games": "https://pigak.com/3d-games.html",
     "action-games": "https://pigak.com/action-games.html",
-    "car-games": "https://pigak.com/car-games.html",
+    "cars-games": "https://pigak.com/cars-games.html",
     "running-games": "https://pigak.com/running-games.html",
     "shooting-games": "https://pigak.com/shooting-games.html",
     "sports-games": "https://pigak.com/sports-games.html",
